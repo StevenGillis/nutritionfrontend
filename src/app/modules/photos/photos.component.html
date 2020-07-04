@@ -1,0 +1,21 @@
+<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile *ngFor='let photoObject of photoList'>
+    <div class="card-body photoObject">
+      <a routerLink="/photos/{{photoObject.id}}">
+        <img  class="card-img-top"
+              [src]="photoObject.imageurl"
+              aria-controls="active"
+              style="max-height:250px;max-width:250px;">
+      </a>
+    </div>
+    <mat-chip-list class="mat-chip-list-stacked" aria-label="Color selection">
+      <mat-chip>Pasta</mat-chip>
+      <mat-chip>Pizza</mat-chip>
+      <mat-chip>Soup</mat-chip>
+      <mat-chip>Tagliatella</mat-chip>
+      <mat-chip>Dish</mat-chip>
+      <mat-chip>Food</mat-chip>
+    </mat-chip-list>
+  </mat-grid-tile>
+</mat-grid-list>
+
